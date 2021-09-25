@@ -1,0 +1,45 @@
+$bkg-dark: rgb(20,29,47);
+$box-dark: #1e2a47;
+$text-dark: #ffffff;
+
+$bkg-light: #f6f8ff;
+$box-light: #fefefe;
+$text-light: #2b3442;
+
+@media (prefers-color-scheme: dark){
+    body {
+        background-color: $bkg-dark;
+        color: $text-dark;
+
+        #profile-box {
+            display: flex;
+            flex-direction: column;
+
+        }
+        .box {
+            background-color: $box-dark;
+        }
+    }
+    @media only screen and (min-width: 600px) {
+        
+    }
+    @media only screen and (min-width: 1200px) {
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+    }
+}
+
+@media (prefers-color-scheme: light){
+    body {
+        background-color: $bkg-light;
+        color: $text-light;
+        .box {
+            background-color: $bkg-light;
+        }
+    }
+}
+
