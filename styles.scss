@@ -46,12 +46,30 @@ body {
                 .profile-stats {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    //justify-content: space-evenly;
                     background-color: $bkg-dark;
                     border-radius: 10px;
-                    h4 {
-                        font-size: 13px;
-                        line-height: 20px;
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        padding: 0px 25px 0px 25px;
+                        h4 {
+                            font-size: 13px;
+                            line-height: 20px;
+                        }
+                    }
+                   
+                }
+                #icon-box {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    padding-top: 35px;
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
                     }
                 }
             }
@@ -90,6 +108,14 @@ body {
                 #profile-box {
                     width: 100%;
                     box-sizing: border-box;
+                }
+                #profile-box {
+                    .box-header {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
                 }
             }
             
