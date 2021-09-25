@@ -1,9 +1,13 @@
+body {
+  font-family: 'Space Mono', monospace;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #141d2f;
     color: #ffffff;
   }
-  body #profile-box {
+  body main #profile-box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -11,13 +15,71 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 25px;
   }
-  body .box {
+  body main #profile-box .col-profile-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body main #profile-box .col-profile-info .box-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  body main #profile-box .col-profile-info .box-header h3 {
+    font-size: 16px;
+    line-height: 24px;
+    color: #0079ff;
+  }
+  body main #profile-box .profile-bio h2 {
+    font-size: 22px;
+    line-height: 33px;
+  }
+  body main #profile-box .profile-stats {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #141d2f;
+    border-radius: 10px;
+  }
+  body main #profile-box .profile-stats h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  body main #search-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 15px;
+  }
+  body main #search-box button {
+    background-color: #0079ff;
+    border: none;
+    color: #ffffff;
+  }
+  body main .box {
     background-color: #1e2a47;
+    margin-top: 15px;
+    border-radius: 10px;
   }
 }
 
-@media only screen and (prefers-color-scheme: dark) and (min-width: 1200px) {
+@media only screen and (prefers-color-scheme: dark) and (min-width: 800px) {
   body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -26,9 +88,18 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  }
+  body main {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body main header,
+  body main #search-box,
+  body main #profile-box {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 

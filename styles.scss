@@ -1,33 +1,97 @@
 $bkg-dark: rgb(20,29,47);
 $box-dark: #1e2a47;
 $text-dark: #ffffff;
+$btn: #0079ff; 
 
 $bkg-light: #f6f8ff;
 $box-light: #fefefe;
 $text-light: #2b3442;
 
+body {
+    font-family: 'Space Mono', monospace;;
+}
+
 @media (prefers-color-scheme: dark){
     body {
         background-color: $bkg-dark;
         color: $text-dark;
+        main {
 
-        #profile-box {
-            display: flex;
-            flex-direction: column;
+            #profile-box {
+                display: flex;
+                flex-direction: column;
+                padding: 25px;
+                .col-profile-info {
+                    display: flex;
+                    flex-direction: row;
+                    .box-header {
+                        h1 {
+                            font-size: 26px;
+                            font-weight: 700;
+                            line-height: 38px;
+                        }
+                        h3 {
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: $btn;
+                        }
+                    }
+                }
+                .profile-bio {
+                    h2 {
+                        font-size: 22px;
+                        line-height: 33px;
+                    }
+                }
+                .profile-stats {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    background-color: $bkg-dark;
+                    border-radius: 10px;
+                    h4 {
+                        font-size: 13px;
+                        line-height: 20px;
+                    }
+                }
+            }
+            #search-box {
+                display: flex;
+                justify-content: space-between;
+                padding: 15px;
 
+                button {
+                    background-color: $btn;
+                    border: none;
+                    color: #ffffff;
+                }
+            }
+            .box {
+                background-color: $box-dark;
+                margin-top: 15px;
+                border-radius: 10px;
+            }
         }
-        .box {
-            background-color: $box-dark;
-        }
+        
     }
     @media only screen and (min-width: 600px) {
         
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 800px) {
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            main {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                header,
+                #search-box,
+                #profile-box {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
             
         }
     }
