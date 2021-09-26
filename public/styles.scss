@@ -1,0 +1,315 @@
+$bkg-dark: rgb(20,29,47);
+$box-dark: #1e2a47;
+$text-dark: #ffffff;
+$btn: #0079ff; 
+
+$bkg-light: #f6f8ff;
+$box-light: #fefefe;
+$text-light: #2b3442;
+$light-clr1: #4b6a9b;
+$light-shadow: #697c9a;
+
+body {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 15px;
+    main {
+        header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .logo {
+                font-weight: 700;
+                margin: 0;
+            }
+            #light {
+                display: none;
+            }
+            #dark {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                span {
+                    img {
+                        padding: 5px 0px 0px 5px;
+                    }
+                }
+            }
+        }
+
+        .box {
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        #search-box {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            padding: 7px;
+
+            #search-icon {
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: 5px;
+                img {
+                    width: 20px;
+                }
+            }
+            #input-box {
+                background-color: transparent;
+                font-family: 'Space Mono', monospace;
+                border: none;
+                width: 100%;
+                padding: 5px;
+            }
+            input[type=text],
+            ::placeholder {
+                color: black;
+            }
+            button {
+                background-color: $btn;
+                border: none;
+                color: #ffffff;
+                padding: 0px;
+                border-radius: 10px;
+                cursor: pointer;
+                padding: 5px 15px;
+                
+                h5 {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        #profile-box {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            .col-profile-info {
+                display: flex;
+                flex-direction: row;
+                #profile-pic {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                }
+                .box-header {
+                    padding-left: 50px;
+                    div {
+                        h1#username {
+                            font-size: 26px;
+                            font-weight: 700;
+                            line-height: 38px;
+                        }
+                        h3 {
+                            a {
+                                font-size: 16px;
+                                line-height: 24px;
+                                text-decoration: none;
+                                color: $btn;
+                            }
+                        }
+                    }
+                }
+            }
+            #profile-bio {
+                h2 {
+                    font-size: 22px;
+                    line-height: 33px;
+                }
+            }
+            .profile-stats {
+                display: flex;
+                flex-direction: row;
+                border-radius: 10px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 25px;
+                    h4 {
+                        margin: 0;
+                        font-size: 13px;
+                        line-height: 20px;
+                        font-weight: normal;
+                    }
+                    #repos,
+                    #followers,
+                    #following {
+                        padding-top: 10px;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                }
+               
+            }
+            #icon-box {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding-top: 25px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    h5 {
+                        margin: 0px 0px 10px 0px;
+                        .icon {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media only screen and (min-width: 600px) {
+    
+}
+@media only screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        main {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            header,
+            .box {     
+                min-width: 600px;
+            }
+            header,
+            #search-box,
+            #profile-box {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            #profile-box {
+                .box-header {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+                #icon-box {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    padding-top: 25px;
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        width: 50%;
+                        h5 {
+                            .icon {
+                                margin-right: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body {
+        background-color: $bkg-dark;
+        color: $text-dark;
+        main {
+            header {
+                #light {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    span {
+                        img {
+                            padding: 7px 0px 0px 5px;
+                        }
+                    }
+                }
+                #dark {
+                    display: none;
+                }
+            }
+                
+            .box {
+                background-color: $box-dark;
+            }
+
+            #search-box {
+                color: #ffffff;
+
+                input[type=text],
+                ::placeholder {
+                    color: #ffffff;
+                }
+                button {
+                    background-color: $btn;
+                    color: #ffffff;
+                }
+            }
+
+            #profile-box {
+                .profile-stats {
+                    background-color: $bkg-dark;
+                }
+            }
+        }
+        
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: $bkg-light;
+        color: $text-light;
+        main {
+            header {
+                #light {
+                    display: none;
+                }
+                #dark {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    span {
+                        img {
+                            padding: 7px 0px 0px 5px;
+                        }
+                    }
+                }
+            }
+                
+            .box {
+                background-color: $box-light;
+                box-shadow: 2px 5px 30px $light-shadow;
+            }
+
+            #search-box {
+                color: black;
+
+                input[type=text],
+                ::placeholder {
+                    color: black;
+                }
+                button {
+                    background-color: $btn;
+                    color: #ffffff;
+                }
+            }
+
+            #profile-box {
+                .profile-stats {
+                    background-color: $bkg-light;
+                }
+            }
+        }
+        
+    }
+   
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Frontend Mentor | GitHub user search app</title>
+</head>
+<body>
+
+  <main>
+    <header>
+      <h1 class="logo">devfinder</h1>
+      <div class="theme-icon" onclick="toggleTheme()"><p id="light">Light<span><img src="./assets/icon-sun.svg" alt=""></span></p><p id="dark">Dark<span><img src="./assets/icon-moon.svg" alt=""></span></p></div>
+    </header>
+    
+    <section id="search-box" class="box">
+      <span id="search-icon"><img src="./assets/icon-search.svg" alt=""></span>
+      <input type="text" name="" id="input-box" placeholder="Search GitHub username...">
+      <button onclick="getUserData()"><h5>Search</h5></button>
+    </section>
+  
+    <section id="profile-box" class="box">
+      <div class="col-profile-info">
+        <img id="profile-pic" src="" alt="profile picture">
+        <div class="box-header">
+          <div>
+            <h1 id="username">Username</h1>
+            <h3 id="username-link"></h3>
+          </div>
+          <p>Joined <span id="joined"></span></p>
+        </div>
+      </div>
+      <p id="profile-bio">This profile has no bio</p>
+      <div class="profile-stats">
+        <div>
+          <h4>Repos</h4>
+          <h4 id="repos">0</h4>
+        </div>
+        <div>
+          <h4>Followers</h4>
+          <h4 id="followers">0</h4>
+        </div>
+        <div>
+          <h4>Following</h4>
+          <h4 id="following">0</h4>
+        </div>
+      </div>
+      <div id="icon-box">
+        <div>
+          <h5><img class="icon" src="./assets/icon-location.svg" alt=""><span id="location">location</span></h5>
+          <h5><img class="icon" src="./assets/icon-website.svg" alt=""><span id="website">website</span></h5>
+        </div>
+        <div>
+          <h5><img class="icon" src="./assets/icon-twitter.svg" alt=""><span id="twitter">twiter</span></h5>
+          <h5><img class="icon" src="./assets/icon-company.svg" alt=""><span id="company">company</span></h5>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  
+
+</body>
+<script src="githubAPI.js"></script>
+</html>

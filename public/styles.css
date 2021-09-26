@@ -1,0 +1,399 @@
+body {
+  font-family: 'Space Mono', monospace;
+  margin: 0;
+  padding: 15px;
+}
+
+body main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main header .logo {
+  font-weight: 700;
+  margin: 0;
+}
+
+body main header #light {
+  display: none;
+}
+
+body main header #dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body main header #dark span img {
+  padding: 5px 0px 0px 5px;
+}
+
+body main .box {
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+body main #search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 7px;
+}
+
+body main #search-box #search-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 5px;
+}
+
+body main #search-box #search-icon img {
+  width: 20px;
+}
+
+body main #search-box #input-box {
+  background-color: transparent;
+  font-family: 'Space Mono', monospace;
+  border: none;
+  width: 100%;
+  padding: 5px;
+}
+
+body main #search-box input[type=text],
+body main #search-box ::-webkit-input-placeholder {
+  color: black;
+}
+
+body main #search-box input[type=text],
+body main #search-box :-ms-input-placeholder {
+  color: black;
+}
+
+body main #search-box input[type=text],
+body main #search-box ::-ms-input-placeholder {
+  color: black;
+}
+
+body main #search-box input[type=text],
+body main #search-box ::placeholder {
+  color: black;
+}
+
+body main #search-box button {
+  background-color: #0079ff;
+  border: none;
+  color: #ffffff;
+  padding: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+body main #search-box button h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+body main #profile-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px;
+}
+
+body main #profile-box .col-profile-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main #profile-box .col-profile-info #profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+body main #profile-box .col-profile-info .box-header {
+  padding-left: 50px;
+}
+
+body main #profile-box .col-profile-info .box-header div h1#username {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+body main #profile-box .col-profile-info .box-header div h3 a {
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #0079ff;
+}
+
+body main #profile-box #profile-bio h2 {
+  font-size: 22px;
+  line-height: 33px;
+}
+
+body main #profile-box .profile-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-radius: 10px;
+}
+
+body main #profile-box .profile-stats div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 25px;
+}
+
+body main #profile-box .profile-stats div h4 {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+body main #profile-box .profile-stats div #repos,
+body main #profile-box .profile-stats div #followers,
+body main #profile-box .profile-stats div #following {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+body main #profile-box #icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding-top: 25px;
+}
+
+body main #profile-box #icon-box div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main #profile-box #icon-box div h5 {
+  margin: 0px 0px 10px 0px;
+}
+
+body main #profile-box #icon-box div h5 .icon {
+  margin-right: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body main header,
+  body main .box {
+    min-width: 600px;
+  }
+  body main header,
+  body main #search-box,
+  body main #profile-box {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body main #profile-box .box-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  body main #profile-box #icon-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    padding-top: 25px;
+  }
+  body main #profile-box #icon-box div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+  body main #profile-box #icon-box div h5 .icon {
+    margin-right: 20px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #141d2f;
+    color: #ffffff;
+  }
+  body main header #light {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  body main header #light span img {
+    padding: 7px 0px 0px 5px;
+  }
+  body main header #dark {
+    display: none;
+  }
+  body main .box {
+    background-color: #1e2a47;
+  }
+  body main #search-box {
+    color: #ffffff;
+  }
+  body main #search-box input[type=text],
+  body main #search-box ::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  body main #search-box input[type=text],
+  body main #search-box :-ms-input-placeholder {
+    color: #ffffff;
+  }
+  body main #search-box input[type=text],
+  body main #search-box ::-ms-input-placeholder {
+    color: #ffffff;
+  }
+  body main #search-box input[type=text],
+  body main #search-box ::placeholder {
+    color: #ffffff;
+  }
+  body main #search-box button {
+    background-color: #0079ff;
+    color: #ffffff;
+  }
+  body main #profile-box .profile-stats {
+    background-color: #141d2f;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f6f8ff;
+    color: #2b3442;
+  }
+  body main header #light {
+    display: none;
+  }
+  body main header #dark {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  body main header #dark span img {
+    padding: 7px 0px 0px 5px;
+  }
+  body main .box {
+    background-color: #fefefe;
+    -webkit-box-shadow: 2px 5px 30px #697c9a;
+            box-shadow: 2px 5px 30px #697c9a;
+  }
+  body main #search-box {
+    color: black;
+  }
+  body main #search-box input[type=text],
+  body main #search-box ::-webkit-input-placeholder {
+    color: black;
+  }
+  body main #search-box input[type=text],
+  body main #search-box :-ms-input-placeholder {
+    color: black;
+  }
+  body main #search-box input[type=text],
+  body main #search-box ::-ms-input-placeholder {
+    color: black;
+  }
+  body main #search-box input[type=text],
+  body main #search-box ::placeholder {
+    color: black;
+  }
+  body main #search-box button {
+    background-color: #0079ff;
+    color: #ffffff;
+  }
+  body main #profile-box .profile-stats {
+    background-color: #f6f8ff;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
