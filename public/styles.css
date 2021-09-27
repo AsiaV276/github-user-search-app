@@ -230,7 +230,6 @@ body main #profile-box #icon-box div h5 .icon {
 
 body main #profile-box #icon-box div h5 #website-link a {
   text-decoration: none;
-  color: #ffffff;
 }
 
 body main #profile-box #icon-box div h5 #website-link a:hover {
@@ -351,6 +350,9 @@ body main #profile-box #icon-box div h5 #website-link a:hover {
   body main #profile-box .profile-stats {
     background-color: #141d2f;
   }
+  body main #profile-box #icon-box div h5 #website-link a {
+    color: #ffffff;
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -403,6 +405,9 @@ body main #profile-box #icon-box div h5 #website-link a:hover {
   }
   body main #profile-box .profile-stats {
     background-color: #f6f8ff;
+  }
+  body main #profile-box #icon-box div h5 #website-link a {
+    color: black;
   }
 }
 /*# sourceMappingURL=styles.css.map */

@@ -162,7 +162,6 @@ body {
                         #website-link {
                             a {
                                 text-decoration: none;
-                                color: #ffffff;
                             }
                             a:hover {
                                 text-decoration: underline;
@@ -269,6 +268,18 @@ body {
                 .profile-stats {
                     background-color: $bkg-dark;
                 }
+                #icon-box {
+                    div {
+                        h5 {
+                            #website-link {
+                                a {
+                                    color: #ffffff;
+                                }
+                            }
+    
+                        }
+                    }
+                }
             }
 
         }
@@ -318,6 +329,17 @@ body {
             #profile-box {
                 .profile-stats {
                     background-color: $bkg-light;
+                }
+                #icon-box {
+                    div {
+                        h5 {
+                            #website-link {
+                                a {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
