@@ -45,22 +45,19 @@ const getUserData = async () => {
             userLocation.innerText = response.location
             website.innerText = response.blog
             company.innerText = response.company
+            console.log(response.blog);
             if (response.blog != null) {
-                //websiteLink.style.display = "block" 
-                //websiteLink.innerText = response.blog
                 website.style.display = "none"
-
                 var websiteLink = document.createElement('a')
                 websiteLink.appendChild(document.createTextNode(response.blog))
-                websiteLink.href = response.blog
+                websiteLink.href = 'https://' + response.blog
                 websiteLink.target = '_blank'
                 websiteLinkSpan.appendChild(websiteLink)
             }
             else {
                 website.innerText = 'Not Available'
             }
-                // : websiteLink.innerText = response.blog
-                //
+    
             response.twitter_username != null ? twitter.innerText = response.twitter_username : twitter.innerHTML = "Not Available"
             response.company != null ? company.innerText = response.company : company.innerText = "Not Available"
         }
@@ -72,7 +69,7 @@ const getUserData = async () => {
 
 getUserData()
 
-/*
+/* Toggling dark or light theme?
 var mql = window.matchMedia('prefers-color-scheme: dark')
 
 const screenTest =(e) => {
