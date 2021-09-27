@@ -160,13 +160,10 @@ body {
                             margin-right: 20px;
                         }
                         #website-link {
-                            a {
-                                text-decoration: none;
-                            }
-                            a:hover {
-                                text-decoration: underline;
-                            }
-                            
+                            text-decoration: none;
+                        }
+                        #website-link:hover {
+                            text-decoration: underline;
                         }
 
                     }
@@ -272,9 +269,9 @@ body {
                     div {
                         h5 {
                             #website-link {
-                                a {
+                               
                                     color: #ffffff;
-                                }
+                                
                             }
     
                         }

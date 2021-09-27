@@ -228,11 +228,11 @@ body main #profile-box #icon-box div h5 .icon {
   margin-right: 20px;
 }
 
-body main #profile-box #icon-box div h5 #website-link a {
+body main #profile-box #icon-box div h5 #website-link {
   text-decoration: none;
 }
 
-body main #profile-box #icon-box div h5 #website-link a:hover {
+body main #profile-box #icon-box div h5 #website-link:hover {
   text-decoration: underline;
 }
 
@@ -350,7 +350,7 @@ body main #profile-box #icon-box div h5 #website-link a:hover {
   body main #profile-box .profile-stats {
     background-color: #141d2f;
   }
-  body main #profile-box #icon-box div h5 #website-link a {
+  body main #profile-box #icon-box div h5 #website-link {
     color: #ffffff;
   }
 }
