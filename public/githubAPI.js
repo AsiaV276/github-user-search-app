@@ -14,17 +14,16 @@ var twitter = document.getElementById('twitter');
 var company = document.getElementById('company');
 var bio = document.getElementById('profile-bio');
 var usernameLinkH3 = document.getElementById('username-link');
+var websiteLinkSpan = document.getElementById('website-link');
 
+var userInput = document.getElementById('input-box').value = 'asiav276';
 
 // fetch data from github API
 const getUserData = async () => {
-    var userInput = document.getElementById('input-box').value;
+    userInput = document.getElementById('input-box').value;
     await fetch(`https://api.github.com/users/${userInput}`)
     .then( res => res.json())
     .then(response => {
-        //console.log(Date.parse(response.created_at).toDateString);
-        console.log(response.html_url); //url to github page
-        console.log(userInput);
         if(response != null) {
             //box header elements
             username.innerHTML = response.login
@@ -46,9 +45,22 @@ const getUserData = async () => {
             userLocation.innerText = response.location
             website.innerText = response.blog
             company.innerText = response.company
-            //response.blog != null ? 
-                //website.innerText = 'Not Available' : websiteLink.innerText = response.blog
-                //websiteLink.style.display = "span" && website.innerText = response.blog && website.style.display = "none"
+            if (response.blog != null) {
+                //websiteLink.style.display = "block" 
+                //websiteLink.innerText = response.blog
+                website.style.display = "none"
+
+                var websiteLink = document.createElement('a')
+                websiteLink.appendChild(document.createTextNode(response.blog))
+                websiteLink.href = response.blog
+                websiteLink.target = '_blank'
+                websiteLinkSpan.appendChild(websiteLink)
+            }
+            else {
+                website.innerText = 'Not Available'
+            }
+                // : websiteLink.innerText = response.blog
+                //
             response.twitter_username != null ? twitter.innerText = response.twitter_username : twitter.innerHTML = "Not Available"
             response.company != null ? company.innerText = response.company : company.innerText = "Not Available"
         }
@@ -58,7 +70,7 @@ const getUserData = async () => {
          })
 }
 
-//getUserData()
+getUserData()
 
 /*
 var mql = window.matchMedia('prefers-color-scheme: dark')

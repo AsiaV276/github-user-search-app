@@ -159,6 +159,17 @@ body {
                         .icon {
                             margin-right: 20px;
                         }
+                        #website-link {
+                            a {
+                                text-decoration: none;
+                                color: #ffffff;
+                            }
+                            a:hover {
+                                text-decoration: underline;
+                            }
+                            
+                        }
+
                     }
                 }
             }
@@ -179,7 +190,7 @@ body {
             margin-right: auto;
             header,
             .box {     
-                min-width: 600px;
+                min-width: 625px;
             }
             header,
             #search-box,
@@ -259,6 +270,7 @@ body {
                     background-color: $bkg-dark;
                 }
             }
+
         }
         
     }

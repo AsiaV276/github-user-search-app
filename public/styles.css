@@ -228,6 +228,15 @@ body main #profile-box #icon-box div h5 .icon {
   margin-right: 20px;
 }
 
+body main #profile-box #icon-box div h5 #website-link a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body main #profile-box #icon-box div h5 #website-link a:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 800px) {
   body {
     display: -webkit-box;
@@ -245,7 +254,7 @@ body main #profile-box #icon-box div h5 .icon {
   }
   body main header,
   body main .box {
-    min-width: 600px;
+    min-width: 625px;
   }
   body main header,
   body main #search-box,
