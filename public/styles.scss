@@ -99,8 +99,8 @@ body {
                 flex-direction: row;
                 #profile-pic {
                     margin-top: 30px;
-                    width: 125px;
-                    height: 125px;
+                    width: 135px;
+                    height: 135px;
                     border-radius: 50%;
                 }
                 .box-header {
@@ -167,13 +167,22 @@ body {
                         .icon {
                             margin-right: 20px;
                         }
+                        #location {
+                            padding-left: 7px;
+                        }
+                        #website,
+                        #twitter {
+                            color: gray;
+                        }
+                        #twitter-link,
                         #website-link {
                             text-decoration: none;
+                            color: #ffffff;
                         }
+                        #twitter-link:hover,
                         #website-link:hover {
                             text-decoration: underline;
                         }
-
                     }
                 }
             }
@@ -209,7 +218,7 @@ body {
                         width: 150px;
                         height: 150px;
                         border-radius: 50%;
-                        margin-top: 0;
+                        margin-top: 15px;
                     }
                     .box-header {
                         padding-left: 50px;
@@ -244,11 +253,6 @@ body {
     body {
         main {
             #profile-box {
-                .col-profile-info {
-                    #profile-pic {
-                        margin-top: 15px;
-                    }
-                }
                 #profile-bio,
                 #icon-box,
                 .profile-stats {

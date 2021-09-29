@@ -15,6 +15,7 @@ var company = document.getElementById('company');
 var bio = document.getElementById('profile-bio');
 var usernameLink = document.getElementById('username-link');
 var websiteLink = document.getElementById('website-link');
+var twitterLink = document.getElementById('twitter-link');
 
 var userInput = document.getElementById('input-box').value = 'asiav276';
 
@@ -44,19 +45,49 @@ const getUserData = async () => {
             website.innerText = response.blog
             company.innerText = response.company
     
-            if (response.blog != null) {
-                website.style.display = 'none'
-                websiteLink.innerText = response.blog
-                websiteLink.href = 'https://' + response.blog
-                websiteLink.target = '_blank'
-            }
-            else {
-                website.innerText = 'Not Available'
-                websiteLink.innerText = ''
-            }
-    
-            response.twitter_username != null ? twitter.innerText = response.twitter_username : twitter.innerHTML = "Not Available"
-            response.company != null ? company.innerText = response.company : company.innerText = "Not Available"
+                //location icon
+               if (response.location != null) {
+                    userLocation.innerText = response.location
+                    userLocation.style.color = '#ffffff'
+                }
+                else {
+                    userLocation.innerText = 'Not Available'
+                    userLocation.style.color = 'gray'
+                }
+
+                //website icon
+                if (response.blog != '') {
+                    website.style.display = 'none'
+                    websiteLink.innerText = response.blog
+                    websiteLink.href = 'https://' + response.blog
+                    websiteLink.target = '_blank'
+                }
+                else {
+                    website.innerText = 'Not Available'
+                    websiteLink.innerText = ''
+                }
+                
+                //twitter icon
+                if (response.twitter_username != null) {
+                    twitter.style.display = 'none'
+                    twitterLink.innerText = '@' + response.twitter_username
+                    twitterLink.href = 'https://twitter.com/' + response.twitter_username
+                    twitterLink.target = '_blank'
+                }
+                else {
+                    twitter.innerText = 'Not Available'
+                    twitterLink.innerText = ''
+                }
+
+                //company icon
+                if (response.company != null) {
+                    company.innerText = response.company
+                    company.style.color = '#ffffff'
+                }
+                else {
+                    company.innerText = 'Not Available'
+                    company.style.color = 'gray'
+                }
         }
         else {
             console.log('show error message/ user not found');
