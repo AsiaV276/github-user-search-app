@@ -27,7 +27,7 @@ const getUserData = async () => {
     .then(response => {
         if(response != null) {
             //box header elements
-            username.innerHTML = response.login
+            username.innerHTML = response.name
             usernameLink.innerText = '@'+response.login.toLowerCase()
             usernameLink.href = response.html_url
             usernameLink.target = '_blank'
@@ -59,7 +59,8 @@ const getUserData = async () => {
                 if (response.blog != '') {
                     website.style.display = 'none'
                     websiteLink.innerText = response.blog
-                    websiteLink.href = 'https://' + response.blog
+                    //considers links including http or not
+                    response.blog.startsWith('http') ? websiteLink.href = 'https://' + response.blog.split('//')[1] : websiteLink.href = 'https://' + response.blog
                     websiteLink.target = '_blank'
                 }
                 else {
