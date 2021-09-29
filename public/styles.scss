@@ -14,8 +14,6 @@ body {
     margin: 0;
     padding: 15px;
     main {
-        //margin-left: auto;
-        //margin-right: auto;
         header {
             display: flex;
             flex-direction: row;
@@ -46,9 +44,10 @@ body {
 
         #search-box {
             display: flex;
-            justify-content: center;
-            align-content: center;
+            //justify-content: center;
+            //align-content: center;
             padding: 7px;
+            position: relative;
 
             #search-icon {
                 margin-top: auto;
@@ -69,16 +68,22 @@ body {
             ::placeholder {
                 color: black;
             }
+            #error {
+                display: none;
+                color: red;
+                position: absolute;
+                right: 125px;
+                top: -5px;
+            }
             button {
                 background-color: $btn;
                 border: none;
                 color: #ffffff;
-                padding: 0px;
                 border-radius: 10px;
                 cursor: pointer;
                 padding: 5px 15px;
                 margin-left: 10px;
-                
+                width: 100px;
                 h5 {
                     margin: 0;
                     padding: 0;
@@ -122,13 +127,16 @@ body {
                     }
                 }
             }
-            #profile-bio {
-                h2 {
-                    font-size: 22px;
-                    line-height: 33px;
+            div {
+                #profile-bio {
+                    /*h2 {
+                        font-size: 22px;
+                        line-height: 33px;
+                    }*/
+                    padding-bottom: 10px;
                 }
-                padding-bottom: 10px;
             }
+            
             .profile-stats {
                 display: flex;
                 flex-direction: row;
@@ -159,6 +167,7 @@ body {
                 flex-direction: column;
                 width: 100%;
                 padding-top: 25px;
+                
                 div {
                     display: flex;
                     flex-direction: column;
@@ -195,13 +204,12 @@ body {
     body {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         main {
             margin-left: auto;
             margin-right: auto;
             header,
             .box {     
-                max-width: 50%;
+                max-width: 850px;
                 min-width: 800px;
             }
             header,
@@ -228,11 +236,13 @@ body {
                         width: 100%;
                     }
                 }
+               
                 #icon-box {
                     display: flex;
                     flex-direction: row;
                     width: 100%;
                     padding-top: 25px;
+                    width: auto;
                     div {
                         display: flex;
                         flex-direction: column;
