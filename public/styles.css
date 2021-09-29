@@ -60,7 +60,7 @@ body main #search-box {
 body main #search-box #search-icon {
   margin-top: auto;
   margin-bottom: auto;
-  padding: 5px;
+  padding: 10px 15px 5px 15px;
 }
 
 body main #search-box #search-icon img {
@@ -103,12 +103,17 @@ body main #search-box button {
   border-radius: 10px;
   cursor: pointer;
   padding: 5px 15px;
+  margin-left: 10px;
 }
 
 body main #search-box button h5 {
   margin: 0;
   padding: 0;
   font-size: 13px;
+}
+
+body main #search-box button:hover {
+  background-color: #66adff;
 }
 
 body main #profile-box {
@@ -133,13 +138,14 @@ body main #profile-box .col-profile-info {
 }
 
 body main #profile-box .col-profile-info #profile-pic {
-  width: 150px;
-  height: 150px;
+  margin-top: 30px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
 }
 
 body main #profile-box .col-profile-info .box-header {
-  padding-left: 50px;
+  padding-left: 25px;
 }
 
 body main #profile-box .col-profile-info .box-header div h1#username {
@@ -153,6 +159,10 @@ body main #profile-box .col-profile-info .box-header div h3 a {
   line-height: 24px;
   text-decoration: none;
   color: #0079ff;
+}
+
+body main #profile-box #profile-bio {
+  padding-bottom: 10px;
 }
 
 body main #profile-box #profile-bio h2 {
@@ -245,15 +255,18 @@ body main #profile-box #icon-box div h5 #website-link:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   body main {
-    width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
   body main header,
   body main .box {
-    min-width: 625px;
+    max-width: 50%;
+    min-width: 800px;
   }
   body main header,
   body main #search-box,
@@ -262,7 +275,23 @@ body main #profile-box #icon-box div h5 #website-link:hover {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  body main #profile-box .box-header {
+  body main #profile-box .col-profile-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body main #profile-box .col-profile-info #profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 0;
+  }
+  body main #profile-box .col-profile-info .box-header {
+    padding-left: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -301,12 +330,26 @@ body main #profile-box #icon-box div h5 #website-link:hover {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  body main #profile-box .col-profile-info #profile-pic {
+    margin-top: 15px;
+  }
+  body main #profile-box #profile-bio,
+  body main #profile-box #icon-box,
+  body main #profile-box .profile-stats {
+    margin-left: 200px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #141d2f;
     color: #ffffff;
   }
   body main header #light {
+    display: none;
+  }
+  body main header #dark {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -315,11 +358,11 @@ body main #profile-box #icon-box div h5 #website-link:hover {
             align-items: center;
     cursor: pointer;
   }
-  body main header #light span img {
+  body main header #dark span img {
     padding: 7px 0px 0px 5px;
   }
-  body main header #dark {
-    display: none;
+  body main header #dark:hover {
+    color: #4b6a9b;
   }
   body main .box {
     background-color: #1e2a47;
@@ -361,9 +404,6 @@ body main #profile-box #icon-box div h5 #website-link:hover {
     color: #2b3442;
   }
   body main header #light {
-    display: none;
-  }
-  body main header #dark {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -372,8 +412,14 @@ body main #profile-box #icon-box div h5 #website-link:hover {
             align-items: center;
     cursor: pointer;
   }
-  body main header #dark span img {
+  body main header #light span img {
     padding: 7px 0px 0px 5px;
+  }
+  body main header #light:hover {
+    color: #4b6a9b;
+  }
+  body main header #dark {
+    display: none;
   }
   body main .box {
     background-color: #fefefe;
