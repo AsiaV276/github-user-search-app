@@ -51,14 +51,9 @@ const getUserData = async () => {
         following.innerHTML = response.following
 
         //icon-box elements
-        userLocation.innerText = " " + response.location
-        website.innerText = response.blog
-        company.innerText = response.company
-
             //location icon
             if (response.location != null) {
                 userLocation.innerText = response.location
-                //userLocation.style.color = '#ffffff'
             }
             else {
                 userLocation.innerText = 'Not Available'
@@ -93,7 +88,6 @@ const getUserData = async () => {
             //company icon
             if (response.company != null) {
                 company.innerText = response.company
-                //company.style.color = '#ffffff'
             }
             else {
                 company.innerText = 'Not Available'
