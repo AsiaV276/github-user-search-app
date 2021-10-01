@@ -7,7 +7,7 @@ $bkg-light: #f6f8ff;
 $box-light: #fefefe;
 $text-light: #2b3442;
 $light-clr1: #4b6a9b;
-$light-shadow: #697c9a;
+$light-shadow: rgba(105, 124, 154, 0.35); //#697c9a; //rgba(75, 106, 155, 0.5);//
 
 #body {
     font-family: 'Space Mono', monospace;
@@ -50,7 +50,7 @@ $light-shadow: #697c9a;
                 padding: 5px;
             }
             input[type=text],
-            ::placeholder {
+            .placeholder-color::placeholder {
                 color: black;
             }
             #error {
@@ -291,7 +291,6 @@ $light-shadow: #697c9a;
                         color: $light-clr1;
                     }
                 }
-                
             }
                 
             .box {
@@ -304,6 +303,9 @@ $light-shadow: #697c9a;
                 input[type=text],
                 ::placeholder {
                     color: #ffffff;
+                }
+                .toggle-toLight::placeholder {
+                    color: black;
                 }
                 button {
                     background-color: $btn;
@@ -368,7 +370,7 @@ $light-shadow: #697c9a;
                 
             .box {
                 background-color: $box-light;
-                box-shadow: 2px 5px 30px $light-shadow;
+                box-shadow: 2px 10px 20px $light-shadow;
             }
 
             #search-box {
@@ -377,6 +379,9 @@ $light-shadow: #697c9a;
                 input[type=text],
                 ::placeholder {
                     color: black;
+                }
+                .toggle-toDark::placeholder {
+                    color: #ffffff;
                 }
                 button {
                     background-color: $btn;

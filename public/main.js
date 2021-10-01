@@ -14,7 +14,7 @@ var bkgLight = '#f6f8ff';
 var boxLight = '#fefefe';
 var textLight = '#2b3442';
 var lightClr1 = '#4b6a9b';
-var lightShadow = '#697c9a';
+var lightShadow = 'rgba(105, 124, 154, 0.35)';
 
 var body = document.getElementById('body')
 var box = document.getElementsByClassName('box')
@@ -23,9 +23,13 @@ var iconText = document.getElementsByClassName('icon-text')
 var websiteLinkA = document.getElementById('website-link')
 var twitterLinkA = document.getElementById('twitter-link')
 var inputBox = document.getElementById('input-box')
+var placeholderColor = document.getElementsByClassName('placeholder-color')[0]
+
 
 const toggleTheme = () => {
     if(window.getComputedStyle(darkBtn).getPropertyValue('display') == 'flex') {
+        //console.log('changing to light theme');
+
         darkBtn.style.display = 'none'
         lightBtn.style.display = 'flex'
         lightBtn.style.alignItems = 'center'
@@ -33,13 +37,16 @@ const toggleTheme = () => {
         body.style.backgroundColor = bkgLight
         body.style.color = 'black'
         inputBox.style.color = 'black'
+        inputBox.classList.remove('toggle-toDark')
+        inputBox.classList.add('toggle-toLight')
+        
         statBox.style.backgroundColor = bkgLight
         websiteLinkA.style.color = 'black'
         twitterLinkA.style.color = 'black'
 
         for (let i = 0; i < 2; i++) {
           box[i].style.backgroundColor = boxLight
-          box[i].style.boxShadow = '2px 5px 30px ' + lightShadow
+          box[i].style.boxShadow = '2px 10px 20px ' + lightShadow
         }
         for (let j = 0; j < iconText.length; j++) {
           if(iconText[j].innerHTML !== 'Not Available') {
@@ -48,6 +55,8 @@ const toggleTheme = () => {
         }
     }
     else if(window.getComputedStyle(lightBtn).getPropertyValue('display') == 'flex') {
+        //console.log('changing to dark theme');
+
         darkBtn.style.display = 'flex'
         darkBtn.style.alignItems = 'center'
         lightBtn.style.display = 'none'
@@ -55,6 +64,9 @@ const toggleTheme = () => {
         body.style.backgroundColor = bkgDark
         body.style.color = '#ffffff'
         inputBox.style.color = '#ffffff'
+        inputBox.classList.remove('toggle-toLight')
+        inputBox.classList.add('toggle-toDark')
+
         statBox.style.backgroundColor = bkgDark
         websiteLinkA.style.color = '#ffffff'
         twitterLinkA.style.color = '#ffffff'

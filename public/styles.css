@@ -54,22 +54,22 @@
 }
 
 #body main #search-box input[type=text],
-#body main #search-box ::-webkit-input-placeholder {
+#body main #search-box .placeholder-color::-webkit-input-placeholder {
   color: black;
 }
 
 #body main #search-box input[type=text],
-#body main #search-box :-ms-input-placeholder {
+#body main #search-box .placeholder-color:-ms-input-placeholder {
   color: black;
 }
 
 #body main #search-box input[type=text],
-#body main #search-box ::-ms-input-placeholder {
+#body main #search-box .placeholder-color::-ms-input-placeholder {
   color: black;
 }
 
 #body main #search-box input[type=text],
-#body main #search-box ::placeholder {
+#body main #search-box .placeholder-color::placeholder {
   color: black;
 }
 
@@ -383,6 +383,18 @@
   #body main #search-box ::placeholder {
     color: #ffffff;
   }
+  #body main #search-box .toggle-toLight::-webkit-input-placeholder {
+    color: black;
+  }
+  #body main #search-box .toggle-toLight:-ms-input-placeholder {
+    color: black;
+  }
+  #body main #search-box .toggle-toLight::-ms-input-placeholder {
+    color: black;
+  }
+  #body main #search-box .toggle-toLight::placeholder {
+    color: black;
+  }
   #body main #search-box button {
     background-color: #0079ff;
     color: #ffffff;
@@ -425,8 +437,8 @@
   }
   #body main .box {
     background-color: #fefefe;
-    -webkit-box-shadow: 2px 5px 30px #697c9a;
-            box-shadow: 2px 5px 30px #697c9a;
+    -webkit-box-shadow: 2px 10px 20px rgba(105, 124, 154, 0.35);
+            box-shadow: 2px 10px 20px rgba(105, 124, 154, 0.35);
   }
   #body main #search-box {
     color: black;
@@ -446,6 +458,18 @@
   #body main #search-box input[type=text],
   #body main #search-box ::placeholder {
     color: black;
+  }
+  #body main #search-box .toggle-toDark::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  #body main #search-box .toggle-toDark:-ms-input-placeholder {
+    color: #ffffff;
+  }
+  #body main #search-box .toggle-toDark::-ms-input-placeholder {
+    color: #ffffff;
+  }
+  #body main #search-box .toggle-toDark::placeholder {
+    color: #ffffff;
   }
   #body main #search-box button {
     background-color: #0079ff;
