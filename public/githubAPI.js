@@ -58,7 +58,7 @@ const getUserData = async () => {
             //location icon
             if (response.location != null) {
                 userLocation.innerText = response.location
-                userLocation.style.color = '#ffffff'
+                //userLocation.style.color = '#ffffff'
             }
             else {
                 userLocation.innerText = 'Not Available'
@@ -93,7 +93,7 @@ const getUserData = async () => {
             //company icon
             if (response.company != null) {
                 company.innerText = response.company
-                company.style.color = '#ffffff'
+                //company.style.color = '#ffffff'
             }
             else {
                 company.innerText = 'Not Available'

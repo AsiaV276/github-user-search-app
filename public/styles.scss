@@ -9,7 +9,7 @@ $text-light: #2b3442;
 $light-clr1: #4b6a9b;
 $light-shadow: #697c9a;
 
-body {
+#body {
     font-family: 'Space Mono', monospace;
     margin: 0;
     padding: 15px;
@@ -22,21 +22,6 @@ body {
                 font-weight: 700;
                 margin: 0;
             }
-            /*
-            #light {
-                display: none;
-            }
-            #dark {
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                span {
-                    img {
-                        padding: 5px 0px 0px 5px;
-                    }
-                }
-            }
-            */
         }
 
         .box {
@@ -201,7 +186,7 @@ body {
 }
 
 @media only screen and (min-width: 800px) {
-    body {
+    #body {
         display: flex;
         flex-direction: column;
         main {
@@ -260,7 +245,7 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-    body {
+    #body {
         main {
             #profile-box {
                 #profile-bio,
@@ -276,7 +261,7 @@ body {
 
 
 @media (prefers-color-scheme: dark){
-    body {
+    #body {
         background-color: $bkg-dark;
         color: $text-dark;
         main {
@@ -333,10 +318,9 @@ body {
                 #icon-box {
                     div {
                         h5 {
+                            
                             #website-link {
-                               
                                     color: #ffffff;
-                                
                             }
     
                         }
@@ -350,7 +334,7 @@ body {
 }
 
 @media (prefers-color-scheme: light) {
-    body {
+    #body {
         background-color: $bkg-light;
         color: $text-light;
         main {
@@ -407,10 +391,11 @@ body {
                 #icon-box {
                     div {
                         h5 {
+                            .icon-text {
+                                color: black;
+                            }
                             #website-link {
-                                a {
-                                    color: black;
-                                }
+                                color: black;
                             }
                         }
                     }
