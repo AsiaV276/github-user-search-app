@@ -22,6 +22,7 @@ body {
                 font-weight: 700;
                 margin: 0;
             }
+            /*
             #light {
                 display: none;
             }
@@ -35,6 +36,7 @@ body {
                     }
                 }
             }
+            */
         }
 
         .box {
@@ -44,8 +46,6 @@ body {
 
         #search-box {
             display: flex;
-            //justify-content: center;
-            //align-content: center;
             padding: 7px;
             position: relative;
 
@@ -281,23 +281,32 @@ body {
         color: $text-dark;
         main {
             header {
-                #light {
-                    display: none;
-                }
-                #dark {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    span {
-                        img {
-                            padding: 7px 0px 0px 5px;
-
+                .theme-icon {
+                    #light {
+                        display: none;
+                        cursor: pointer;
+                        span {
+                            img {
+                                padding: 7px 0px 0px 5px;
+                            }
                         }
                     }
+                    #dark {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        span {
+                            img {
+                                padding: 7px 0px 0px 5px;
+                                width: 20px;
+                            }
+                        }
+                    }
+                    #dark:hover{
+                        color: $light-clr1;
+                    }
                 }
-                #dark:hover{
-                    color: $light-clr1;
-                }
+                
             }
                 
             .box {
@@ -346,21 +355,30 @@ body {
         color: $text-light;
         main {
             header {
-                #light {
-                    display: flex;
-                    align-items: center;
-                    cursor: pointer;
-                    span {
-                        img {
-                            padding: 7px 0px 0px 5px;
+                .theme-icon {
+                    #light {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        span {
+                            img {
+                                padding: 7px 0px 0px 5px;
+                            }
                         }
                     }
-                }
-                #light:hover {
-                    color: $light-clr1;
-                }
-                #dark {
-                    display: none;
+                    #light:hover {
+                        color: $light-clr1;
+                    }
+                    #dark {
+                        display: none;
+                        cursor: pointer;
+                        span {
+                            img {
+                                padding: 7px 0px 0px 5px;
+                                width: 20px;
+                            }
+                        }
+                    }
                 }
             }
                 

@@ -107,39 +107,3 @@ const getUserData = async () => {
 }
 
 getUserData()
-
-// Toggling dark or light theme
-var darkBtn = document.getElementById('dark')
-var lightBtn = document.getElementById('light')
-/*var mql = window.matchMedia('(prefers-color-scheme: dark)')
-//var isDarkPref
-
-function screenTest(e) {
-    if (e.matches) {
-      //computer's prefered theme is dark
-      //console.log('the computers prefered theme is dark');
-      //isDarkPref = true
-
-    } else {
-      //computer's prefered theme is light
-      //console.log('the computers prefered theme is light');
-      //isDarkPref = false
-    }
-  }
-  
-  mql.addEventListener('change', screenTest);*/
-
-  //console.log(lightBtn);
-
-const toggleTheme = () => {
-    if(lightBtn.style.display === 'flex') {
-        //lightBtn = 'none'
-        //darkBtn = 'flex'
-        console.log('click');
-    }
-    else {
-        //darkBtn = 'none'
-        //lightBtn = 'flex'
-        console.log('not working');
-    }
-}

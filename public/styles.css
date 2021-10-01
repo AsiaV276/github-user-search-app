@@ -15,29 +15,26 @@ body main header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  /*
+            #light {
+                display: none;
+            }
+            #dark {
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                span {
+                    img {
+                        padding: 5px 0px 0px 5px;
+                    }
+                }
+            }
+            */
 }
 
 body main header .logo {
   font-weight: 700;
   margin: 0;
-}
-
-body main header #light {
-  display: none;
-}
-
-body main header #dark {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  cursor: pointer;
-}
-
-body main header #dark span img {
-  padding: 5px 0px 0px 5px;
 }
 
 body main .box {
@@ -356,10 +353,14 @@ body main #profile-box #icon-box div h5 #website-link:hover {
     background-color: #141d2f;
     color: #ffffff;
   }
-  body main header #light {
+  body main header .theme-icon #light {
     display: none;
+    cursor: pointer;
   }
-  body main header #dark {
+  body main header .theme-icon #light span img {
+    padding: 7px 0px 0px 5px;
+  }
+  body main header .theme-icon #dark {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -368,10 +369,11 @@ body main #profile-box #icon-box div h5 #website-link:hover {
             align-items: center;
     cursor: pointer;
   }
-  body main header #dark span img {
+  body main header .theme-icon #dark span img {
     padding: 7px 0px 0px 5px;
+    width: 20px;
   }
-  body main header #dark:hover {
+  body main header .theme-icon #dark:hover {
     color: #4b6a9b;
   }
   body main .box {
@@ -413,7 +415,7 @@ body main #profile-box #icon-box div h5 #website-link:hover {
     background-color: #f6f8ff;
     color: #2b3442;
   }
-  body main header #light {
+  body main header .theme-icon #light {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -422,14 +424,19 @@ body main #profile-box #icon-box div h5 #website-link:hover {
             align-items: center;
     cursor: pointer;
   }
-  body main header #light span img {
+  body main header .theme-icon #light span img {
     padding: 7px 0px 0px 5px;
   }
-  body main header #light:hover {
+  body main header .theme-icon #light:hover {
     color: #4b6a9b;
   }
-  body main header #dark {
+  body main header .theme-icon #dark {
     display: none;
+    cursor: pointer;
+  }
+  body main header .theme-icon #dark span img {
+    padding: 7px 0px 0px 5px;
+    width: 20px;
   }
   body main .box {
     background-color: #fefefe;
